@@ -1,0 +1,61 @@
+<!--pages/sendCode/index2.wxml-->
+<view class="head_top"></view>
+<image src="https://i.postimg.cc/WzKK73vQ/20210729155755.jpg" class="bg_img"></image>
+<view class="top flex-column">
+  <image src="https://i.postimg.cc/Gm7KjGmN/111.jpg"></image>
+  <text>~欢迎来到苏苏的码云~</text>
+  <text>邀请码：HUSUSU</text>
+
+  <view catchtap="showDialog" class="btn">填写邀请码</view>
+</view>
+
+<!-- 验证码组件 -->
+<verifycode id='verifycode' title="请输入邀请码哈" content="邀请码：HUSUSU" />
+
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="st_icon s_bg0">苏苏1</view>
+  <view class="st_icon s_bg0">苏苏2</view>
+  <view class="st_icon s_bg0">苏苏3</view>
+  <view class="st_icon1 s_bg0">苏苏4</view>
+</view>
+
+
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="i right"></view>
+  <view class="i left"></view>
+  <view class="i up"></view>
+  <view class="i down"></view>
+</view>
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="box"></view>
+  <view class="triangle-up"></view>
+  <view class="triangle-down"></view>
+  <view class="triangle-left"></view>
+  <view class="triangle-right"></view>
+  <view class="triangle-topleft"></view>
+</view>
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="jux"></view>
+  <view class="jux1"></view>
+  <view class="jux2"></view>
+  <view class="jux3"></view>
+  <view class="jux4"></view>
+</view>
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="jux5"></view>
+  <view class="jux6"></view>
+  <view class="jux7"></view>
+  <view class="jux8"></view>
+  <view class="jux9"></view>
+</view>
+<view class="flex-row j_b" style="margin-top:60rpx;padding:0 40rpx;">
+  <view class="c1"></view>
+  <view class="tran"></view>
+  <view class="main"></view>
+</view>
+
+<view class="flex-row center_btn"></view>
+
+<view class="trighht"></view>
+
+<button open-type="contact" class="c_btn">联系客服</button>

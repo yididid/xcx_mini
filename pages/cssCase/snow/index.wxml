@@ -1,0 +1,4 @@
+<!--pages/cssCase/snow/index.wxml-->
+<view wx:for="{{left}}" wx:key="index">
+  <text style="left:{{left[index]}}rpx" animation="{{animation[index]}}" class='snow' bindtap="hide" data-index='{{index}}'>*</text>
+</view>

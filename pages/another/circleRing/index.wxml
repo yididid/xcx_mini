@@ -1,0 +1,145 @@
+<!--pages/another/circleRing/index.wxml-->
+<view class="head_fix flex-row">
+  <view class="head_box flex-row" >
+    <image src="/img/search_icon.png" class="s_icon"></image>
+    <input class="i_ipt" placeholder="搜索目标名称" placeholder-class="p_class"/>
+  </view>
+  <view catchtap="showDialog">筛选</view>
+</view>
+<view class="con" wx:if="{{hasData}}">
+  <block wx:for="{{data_list}}" wx:key="index">
+    <view class="c_item flex j_b" catchtap="toDetail">
+      <view>
+        <view class="flex c_one">
+          <view class="c_name">名称：</view>
+          <view class="c_va line_ellipsis">苏苏就是小苏苏</view>
+        </view>
+        <view class="flex c_one">
+          <view class="c_name">名称：</view>
+          <view class="c_va line_ellipsis">苏苏就是小苏苏</view>
+        </view>
+        <view class="flex c_one">
+          <view class="c_name">名称：</view>
+          <view class="c_va line_ellipsis">苏苏就是小苏苏</view>
+        </view>
+        <view class="flex c_one">
+          <view class="c_name">名称：</view>
+          <view class="c_va line_ellipsis">苏苏就是小苏苏</view>
+        </view>
+      </view>
+      <view class="c_charts flex-column">
+        <view class="c_cha">
+          <canvas-ring id="canvasRing{{index}}" class="c_a" canvasWidth="{{80}}" value="{{item.value}}" lineWidth="{{3}}"></canvas-ring>
+          <view class="vaa" wx:if="{{item.imgSrc}}">
+            <image  src="{{item.imgSrc}}" class="canvas_img"></image>
+            <view class="c_value">{{item.value}}%</view>
+          </view>
+        </view>
+        <view><text class="c_num_has">6800</text><text>/120000</text></view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 筛选弹框 -->
+<view  hidden="{{showDialog}}">
+  <view class='mask' bindtap="closePop"></view>
+  <view class="dialog">
+    <scroll-view scroll-y style="height:80%">
+      <view class="main_con">
+ 
+        <view class="dialog_item" wx:if="{{typeList.length>0}}">
+          <view class="flex-row j_b d_title">
+            <text class="d_name">时间类型:</text>
+          </view>
+          <view class="flex d_chose">
+            <block wx:for="{{typeList}}" wx:key="*this"  wx:for-index="index" wx:for-item="item">
+              <view class="d_item {{item.chosed==true?'chosed':''}}" catchtap="choseKey"  data-list="typeList"   data-index="{{index}}">{{item.type_name}}</view>
+            </block>
+          </view>
+        </view>
+       
+        <view class="dialog_item" wx:if="{{monthList.length>0}}">
+        <view class="flex-row j_b d_title">
+          <text class="d_name">月度选择:</text>
+
+          <view class="d_status" wx:if="{{show_more}}" catchtap="showMore">
+            展开<image src="/img/open_up.png" class="zhank_icon"></image>
+          </view>
+          <view class="d_status" wx:if="{{show_more!=undefined && !show_more}}" catchtap="showMore">
+            收起<image src="/img/clolse_down.png" class="zhank_icon"></image>
+          </view>
+        </view>
+        <view class="flex d_chose">
+          <block wx:for="{{monthList}}" wx:key="*this"  wx:for-index="index" wx:for-item="item">
+            <view class="d_item {{show_more?'d_item_none':''}} {{item.chosed==true?'chosed':''}}" catchtap="choseKey"  data-list="monthList"    data-index="{{index}}">{{item.value}}</view>
+          </block>
+        </view>
+        </view>
+      
+        <view class="dialog_item" wx:if="{{targetList.length>0}}">
+            <view class="flex-row j_b d_title">
+              <text class="d_name">目标分类:</text>
+            </view>
+            <view class="flex d_chose">
+              <block wx:for="{{targetList}}" wx:key="*this"  wx:for-index="index" wx:for-item="item">
+                <view class="d_item {{item.chosed==true?'chosed':''}}"  catchtap="choseKey"  data-list="targetList"  data-index="{{index}}">{{item.type_name}}</view>
+              </block>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="d_bottom">
+      <view class="d_view">
+        <view class="line"></view>
+        <view class="btn_text" bindtap="reset">重置</view>
+        <view class="btn_text" bindtap="search">确认</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 替换原先的接口  canvas 2d -->
+<view  class="flex-row j_b rows">
+  <view class="new_ca">
+    <!-- style="width:{{canvasW}}px;height: {{canvasH}}px;"  -->
+    <canvas type="2d"  id="myCanvas" ></canvas>
+  </view>
+</view>
+
+<image src="{{imagePath}}" class="ca_img"></image>
+<view class="flex-row j_b rows">
+  <!-- 其他样式的 圆环1 -->
+  <canvas-ring id="ring1" value="{{num_per}}"></canvas-ring>
+  <!-- 其他样式的 2 -->
+  <canvas-ring id="varyRing" value="{{vary_val}}" title="{{'苏苏小苏苏'}}" maxValue="{{99}}" minValue="{{0}}" suffix="{{'**'}}" startDegree="{{vary_start}}" lineWidth="{{vary_lineW}}" lineColor="{{vary_color}}"  valueColor="{{val_color}}"></canvas-ring>
+</view>
+
+<!-- 其他样式的 圆环3 -->
+<view  class="flex-row j_b rows">
+  <view class='progress_box'>
+    <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas> 
+    <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas> 
+    <view class="progress_text">
+      <view class="progress_dot"></view> 
+      <text class='progress_info'> {{progress_txt}}</text>
+    </view> 
+  </view>
+</view>
+
+<!-- 时间进度条 -->
+<view class="rows">
+  <view class='out'>
+  <!-- 有报错 先注释一下 -->
+    <!-- <view class='in' style="width: {{progressWidth}}% "></view> -->
+  </view>
+  <view class='flex-row j_b action'>
+    <text>{{progressTime}}秒</text>
+    <text bindtap='playbtn' data-change='1'>{{playPausetips}}</text>
+  </view>
+</view>
+<view  class="flex-row j_b rows">
+  <view class='progress_box'>
+    <canvas canvas-id="gg" class="progress_bg" ></canvas>
+  </view>
+</view>
+

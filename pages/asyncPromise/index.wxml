@@ -1,0 +1,7 @@
+<!--pages/asyncPromise/index.wxml-->
+<view class="a">
+  <image src="https://i.postimg.cc/76br1jzJ/susu1.jpg" class="a1"></image>
+  <view class="a0">
+    <image src="https://i.postimg.cc/76br1jzJ/susu1.jpg" ></image>
+  </view>
+</view>

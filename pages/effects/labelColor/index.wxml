@@ -1,0 +1,6 @@
+<!--pages/effects/labelColor/index.wxml-->
+<view class="box flex-row  ">
+  <block wx:for="{{arr}}" wx:key="key" wx:for-index="key">
+    <view class='box_item' style="background-color:{{item.color}}">{{item.name}}</view>
+  </block>
+</view>

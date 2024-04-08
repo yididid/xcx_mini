@@ -1,0 +1,6 @@
+<view class="container" bindtouchstart="moveStart" bindtouchend="moveEnd" style="height: {{container_Height}};">
+  <view class="combo_box" wx:for="{{is_num}}">
+    <view class="combo_head" style="height:{{combo_head_height}}" bindtap="set_show" data-type="{{index}}">标题{{index}}</view>
+    <view class="combo_content {{is_show==index?'combo_content_show':''}}">{{index}}</view>
+  </view>
+</view>

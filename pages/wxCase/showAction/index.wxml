@@ -1,0 +1,78 @@
+<!--pages/wxCase/showAction/index.wxml-->
+<view class="head">
+  <view class="head_search flex-row">
+    <image src="/img/search.png" class="head_s_icon"></image>
+    <input placeholder="搜索" placeholder-class="p_class" class="head_ipt" />
+  </view>
+  <view class="flex-row j_a head_sel">
+    <picker bindchange="change"  data-checked="picker_chose1"data-type="storeList" data-value="store" value="{{store}}" range="{{storeList}}" range-key="name">
+      <view class="flex-row j_c">
+        <tetx class="text_ellipsis">{{store}}</tetx>
+        <image src="{{picker_chose1?'/img/open_up.png':'/img/clolse_down.png'}}" class="arrow"></image>
+      </view>
+    </picker>
+    <picker bindchange="change"  data-checked="picker_chose2" data-type="themeList" data-value="theme" value="{{theme}}" range="{{themeList}}" range-key="name">
+      <view class="flex-row j_c">
+        <tetx class="text_ellipsis">{{theme}}</tetx>
+        <image src="{{picker_chose2?'/img/open_up.png':'/img/clolse_down.png'}}" class="arrow"></image>
+      </view>
+    </picker>
+    <picker bindchange="change"data-checked="picker_chose3" data-type="statusList" data-value="status" value="{{status}}" range="{{statusList}}" range-key="name">
+      <view class="flex-row j_c">
+        <tetx class="text_ellipsis">{{status}}</tetx>
+        <image src="{{picker_chose3?'/img/open_up.png':'/img/clolse_down.png'}}" class="arrow"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="flex-row j_b">
+    <picker bindchange="change" data-type="dateList" data-value="date" value="{{date}}" range="{{dateList}}" range-key="name">
+      <view class="flex-row head_date">
+        <text>{{date}}</text>
+        <image src="/img/down_icon.png" class="down_year"></image>
+      </view>
+    </picker>
+    <view class="head_ac" catchtap="showAction">{{show_action?'取消':'管理'}}</view>
+  </view>
+</view>
+<view class="con">
+  <!-- 有数据 -->
+  <block wx:if="{{hasData}}">
+    <checkbox-group bindchange="actionChange">
+      <block wx:for="{{list}}" wx:key="list">
+        <label>
+          <view class="flex-row">
+            <checkbox value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" wx:if="{{show_action}}" />
+            <view class="c_item flex">
+              <image src="/img/star-o.png" class="act_icon"></image>
+              <view>
+                <view class="item_title">123</view>
+                <view class="item_date">开始时间：2012.11.20 15:27</view>
+                <view class="flex-row j_b item_theme">
+                  <text class="text_ellipsis theme_text">主题：111</text>
+                  <text>当前报名人数：20</text>
+                </view>
+                <view>参与111</view>
+              </view>
+              <!-- 状态 -->
+              <view class="status {{item.status==0?'ing':'over'}}">{{item.status==0?'进行中':'已超时'}}</view>
+            </view>
+          </view>
+        </label>
+      </block>
+    </checkbox-group>
+  </block>
+  <!-- 无数据 -->
+  <block wx:else>
+  </block>
+</view>
+
+<!-- 底部按钮 -->
+<view class="fix_bottom flex-row">
+  <view class="flex-row j_b btn_list">
+    <view>已选{{list_num}}个</view>
+    <view class="flex-row">
+      <view class="btn {{list_num>0?'btn_ative':''}}">按钮2</view>
+      <view class="btn  {{list_num>0?'btn_ative':''}}">按钮一</view>
+    </view>
+  </view>
+</view>

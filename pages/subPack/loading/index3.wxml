@@ -1,0 +1,132 @@
+<!--pages/subPack/loading/index3.wxml-->
+<view class="tips">tips:些许案例是学习而来~</view>
+<view class="box">
+  <view class="loader1"></view>
+</view>
+<view class="box">
+  <view class="loader2"></view>
+</view>
+<view class="box">
+  <view class="loader3"></view>
+</view>
+<view class="box">
+  <view class="loader4">
+    <view class="l-item" ></view>
+    <view class="l-item"></view>
+    <view class="l-item" ></view>
+    <view class="l-item" ></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader5">
+    <view class="l-item" ></view>
+    <view class="l-item"></view>
+    <view class="l-item" ></view>
+    <view class="l-item" ></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader6">
+    <view class="dot" animation="{{alpha[0]}}"></view>
+    <view class="dot" animation="{{alpha[1]}}"></view>
+    <view class="dot" animation="{{alpha[2]}}"></view>
+    <view class="dot" animation="{{alpha[3]}}"></view>
+    <view class="dot" animation="{{alpha[4]}}"></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader7">
+    <view style="--i:1;--color:#82af77"></view>
+    <view style="--i:2;--color:#39b3d8"></view>
+    <view style="--i:3;--color:#416937"></view>
+    <view style="--i:4;--color:#84d488"></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader8">
+    <view class="wave"></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader9">
+    <view style="--i:1;--color:#82a877"></view>
+    <view style="--i:2;--color:#39b3d8"></view>
+    <view style="--i:3;--color:#416937"></view>
+    <view style="--i:4;--color:#84d488"></view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader10">
+    <view class="a"></view>
+    <view class="a"> </view>
+    <view class="a"></view>
+    <view class="a"> </view>
+  </view>
+</view>
+<view class="box">
+  <view class="loader11">
+    <view class="box"></view>
+    <view class="box"></view>
+    <view class="box"></view>
+    <view class="box"></view>
+    <view class="box"></view>
+    <view class="box"></view>
+  </view>
+</view>
+
+<view class="box box1">
+  <view class="loader12 ">
+    <view class="s">
+      <view class="s1"></view>
+      <view class="s1"></view>
+      <view class="s1"></view>
+      <view class="s1"></view>
+    </view>
+  </view>
+</view>
+
+<view class="box">
+  <view class="loader13"></view>
+</view>
+
+<view class="box">
+  <view class="loader14"></view>
+</view>
+
+<view class="box box1">
+  <view class="loader15"></view>
+</view>
+
+<view class="box">
+  <view class="loader16"></view>
+</view>
+
+<view class="box box1">
+  <view class="loader17"></view>
+</view>
+
+<view class="box box1">
+  <view class="loader18">
+    <view></view>
+  </view>
+</view>
+
+<view class="box box1">
+  <view class="loader19">
+  </view>
+</view>
+
+
+<view class="box box2">
+  <view class="loader20"></view>
+  <view class="earth-orbit" >
+    <view class="moon"></view>
+  </view>
+</view>
+
+<view class="box box2">
+  <view class="loader21"></view>
+  <view class="earth-orbit br1" >
+    <view class="moon br2"></view>
+  </view>
+</view>

@@ -1,0 +1,299 @@
+/* pages/wxCase/buttonGr/index.wxss */
+page {
+  background: #222;
+  padding-bottom: 40rpx;
+}
+
+view {
+  margin: 30px auto;
+}
+
+/* 注意问题：border-image的使用是不能实现圆角的效果，各位需要注意这个属性 */
+.a {
+  background: transparent;
+  color: #23b7cb;
+  font-size: 15px;
+  padding: 5px 15px;
+  width: 200px;
+  height: 100px;
+  border: 4px transparent solid;
+  border-image: linear-gradient(to right, #000718, #23b7cb) 1 10;
+}
+
+/* 利用伪类元素去实现背景边的渐变效果，同时我们还可以加上动画效果，利用的是transtion:all ease 300ms即可 */
+.b {
+  color: #23b7cb;
+  font-size: 15px;
+  background: #fff;
+  width: 200px;
+  height: 100px;
+  border: 3px transparent solid;
+  border-radius: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.b::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: linear-gradient(0deg, #FFCD1E, #FFEFB7);
+  border-radius: 30px;
+  content: '';
+  z-index: -1;
+}
+
+
+.d {
+  border: none;
+  background-color: #fff;
+  font-size: 40rpx;
+  width: 250rpx;
+  box-sizing: border-box;
+  background-image: linear-gradient(#2e2e2e, #2e2e2e), linear-gradient(to bottom right, #0fd850, #f9f047);
+  font-weight: 300;
+  color: #2fd830;
+  padding: 2rpx;
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 1;
+  background-clip: content-box, padding-box;
+}
+
+.c {
+  width: 186rpx;
+  height: 156rpx;
+  border: 7rpx solid transparent;
+  background: #F7FCFC;
+  box-shadow: -6rpx 8rpx 16rpx 0rpx rgba(7, 53, 130, 0.11) inset;
+  border-radius: 34rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.c::after {
+  content: '';
+  position: absolute;
+  top: -12rpx;
+  bottom: -12rpx;
+  left: -12rpx;
+  right: -12rpx;
+  background: linear-gradient(0deg, #FFCD1E, #FFEFB7);
+  content: '';
+  z-index: -1;
+  border-radius: 34rpx;
+}
+
+
+.e {
+  margin-top: 40px;
+  height: 20px;
+  border-radius: 20px;
+  width: 200px;
+  color: #fff;
+  background: linear-gradient(to right, #ffaa00 0%, red 100%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  padding: 10px;
+  animation: border-dance 4s infinite linear;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+  }
+
+  100% {
+    background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+  }
+}
+
+.f {
+  color: #fff;
+  margin-top: 40px;
+  height: 100px;
+  width: 200px;
+  background: linear-gradient(90deg, #ffaa00 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, #ffaa00 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  padding: 10px;
+  animation: border-dance 4s infinite linear;
+}
+
+.g {
+  color: #fff;
+  margin-top: 40px;
+  height: 100px;
+  width: 200px;
+  background: linear-gradient(90deg, #ffaa00 50%, transparent 50%), linear-gradient(90deg, red 50%, transparent 50%), linear-gradient(0deg, #ffaa00 50%, transparent 50%), linear-gradient(0deg, red 50%, transparent 50%);
+  background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  padding: 10px;
+  animation: border-dance 4s infinite linear;
+}
+
+.i {
+  position: relative;
+  margin: 10% auto 0;
+  width: 50%;
+  height: 50px;
+  background: linear-gradient(0deg, #000, #272727);
+  border-radius: 25px;
+}
+
+.i:before,
+.i:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+      #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  border-radius: 25px;
+  animation: anim-moving-glow 20s linear infinite;
+}
+
+@keyframes anim-moving-glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.i:after {
+  filter: blur(30px);
+}
+
+.ava_grop {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  margin-left: 50rpx;
+  display: inline-block;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin: 0;
+  display: inline-block;
+  color: var(--white);
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: -30rpx;
+  border: 4rpx solid var(--white);
+  vertical-align: middle;
+}
+
+.cu-avatar-group {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  padding: 0 10rpx 0 40rpx;
+  display: inline-block;
+}
+
+.cu-avatar {
+  border-radius: 50%;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  color: var(--white);
+  white-space: nowrap;
+  position: relative;
+  width: 96rpx;
+  height: 96rpx;
+  font-size: 2em;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  margin-left: -30rpx;
+  border: 4rpx solid var(--white);
+  vertical-align: middle;
+}
+
+.gray {
+  padding: 0 40rpx;
+  font-size: 32rpx;
+  height: 80rpx;
+  background-color: #ccc;
+  color: var(--white);
+  margin: 30rpx auto;
+  display: block;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  width: 710rpx;
+  margin: 30rpx auto;
+}
+
+.gray.button-hover {
+  transform: translate(1rpx, 1rpx);
+}
+
+switch,
+checkbox,
+radio {
+  position: relative;
+}
+
+switch::after,
+switch::before {
+  font-family: "cuIcon";
+  content: "\e645";
+  position: absolute;
+  color: var(--white) !important;
+  top: 0%;
+  left: 0rpx;
+  font-size: 26rpx;
+  line-height: 26px;
+  width: 50%;
+  text-align: center;
+  pointer-events: none;
+  transform: scale(0, 0);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 9;
+  bottom: 0;
+  height: 26px;
+  margin: auto;
+}
+
+switch::before {
+  content: "\e646";
+  right: 0;
+  transform: scale(1, 1);
+  left: auto;
+}
+
+switch[checked]::after,
+switch.checked::after {
+  transform: scale(1, 1);
+}
+
+switch[checked]::before,
+switch.checked::before {
+  transform: scale(0, 0);
+}
+
+switch[checked]::before {
+  transform: scale(0, 0);
+}

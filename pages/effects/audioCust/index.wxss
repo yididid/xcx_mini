@@ -1,0 +1,68 @@
+/* pages/effects/audioCust/index.wxss */
+page {
+  background-color: aliceblue;
+}
+
+.music {
+  width: 86rpx;
+  height: 86rpx;
+  position: absolute;
+  top: 108rpx;
+  right: 10rpx;
+  z-index: 99;
+
+}
+
+.circle {
+  animation: cirlce 4s linear infinite;
+}
+
+@keyframes cirlce {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.btn {
+  margin: 550rpx auto 0;
+  width: 625rpx;
+  height: 80rpx;
+  background: linear-gradient(90deg, #dd8449 0%, #e28e74 52%, #dbb290 100%);
+  border-radius: 6rpx;
+  font-size: 30rpx;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:after {
+  content: "";
+  background: #999;
+  position: absolute;
+  width: 750rpx;
+  height: 750rpx;
+  left: calc(50% - 375rpx);
+  top: calc(50% - 375rpx);
+  opacity: 0;
+  margin: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
+}
+.fix_img{
+  position: fixed;
+  left: 0;
+  top: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #87ceeb;
+  z-index: -1;
+}

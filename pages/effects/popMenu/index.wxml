@@ -1,0 +1,5 @@
+<!--pages/effects/popMenu/index.wxml-->
+<image src="https://i.postimg.cc/Gpm5bmJz/image.png" animation="{{a1}}" class="icon"></image>
+<image src="https://i.postimg.cc/dVshQb74/image.png" animation="{{a2}}" class="icon" ></image>
+<image src="https://i.postimg.cc/prQdRCRw/image.png" animation="{{a3}}" class="icon" ></image>
+<image src="https://i.postimg.cc/y89F9XfG/add.png" animation="{{start}}" class="icon_new" catchtap="btnPop"></image>

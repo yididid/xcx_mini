@@ -1,0 +1,43 @@
+/* pages/cssCase/circleHead/index.wxss */
+.head {
+  width: 100%;
+  height: 231rpx;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.head::after {
+  content: '';
+  width: 140%;
+  height: 231rpx;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  background: #FA871E;
+}
+
+.mb20 {
+  margin-bottom: 20rpx;
+}
+
+.circle {
+  border: 1px solid #FA871E;
+  width: 600rpx;
+  overflow: hidden;
+  height: 700rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nox {
+  width: 680rpx;
+  height: 680rpx;
+  background-color: #FA871E;
+  border-radius: 50%;
+  margin-top: -260rpx;
+}

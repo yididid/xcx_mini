@@ -1,0 +1,87 @@
+<!--pages/cssCase/cardVoucher/index.wxml-->
+<!-- 引导篇 -->
+<view class="card-000 card">渐变</view>
+<view class="card-001 card">半圆伪元素</view>
+<view class="card-002 card">mask遮罩</view>
+<view class="card-003 card">渐变</view>
+<view class="card-004 card">mask遮罩</view>
+<view class="card-005 card">mask遮罩+多重drop-shadow实现边框</view>
+<view class="card-006 card">mask遮罩+伪元素+border</view>
+<!-- 样式1 -->
+<view class="card-box">
+  <view class="card-name">苏苏就是小苏苏哇</view>
+  <view class="card-banner">VIP</view>
+  <view class="card-content">
+    <text>剩余</text>
+    <text>88888</text>
+    <text>元</text>
+  </view>
+  <view class="flex-row j_c card-btm">
+    <view class="flex-column j_c card-btm-item">
+      <text>已获得奖项</text>
+      <text>888个</text>
+    </view>
+    <view class="flex-column j_c card-btm-item">
+      <text>已出售</text>
+      <text>1008个</text>
+    </view>
+    <view class="flex-column j_c card-btm-item">
+      <text>已买入</text>
+      <text>999个</text>
+    </view>
+  </view>
+</view>
+<!-- 样式2 -->
+<view class="coupon-box flex">
+  <view class="cou-banner">即将过期</view>
+  <view class="cou-left flex-row j_c">
+    <view>
+      <text>888</text>
+      <text>元</text>
+    </view>
+  </view>
+  <view class="cou-right flex-row ">
+    <view>
+      <view>苏苏就是小苏苏哇--苏苏</view>
+      <view class="cou-right-time">剩余 23:59:59</view>
+    </view>
+  </view>
+</view>
+<!-- 样式3 -->
+<view class="card-3"></view>
+<!-- 样式4 -->
+<view class="card-4"></view>
+<!-- 样式5 -->
+<view class="card-5"></view>
+<!-- 渐变带边框 -->
+<view class="card-border card"></view>
+<!-- 样式18 -->
+<view class="card-18"></view>
+<!-- 样式6 -->
+<view class="card-6"></view>
+<!-- 样式7 -->
+<view class="card-7"></view>
+<!-- 样式8 -->
+<view class="card-8"></view>
+<!-- 样式9 -->
+<view class="card-9"></view>
+<!-- 样式10 -->
+<view class="card-10"></view>
+<!-- 样式11 -->
+<view class="card-11"></view>
+<!-- 样式12 -->
+<view class="card-12"></view>
+<!-- 样式13 -->
+<view class="card-13"></view>
+<!-- 样式14 -->
+<view class="card-14"></view>
+<!-- 样式15 -->
+<view class="card-15">
+  <view class="inner"></view>
+</view>
+<!-- 样式16 -->
+<view class="card-16"></view>
+<!-- 样式17 -->
+<view class="card-17"></view>
+<!-- 样式19-- -->
+<view class="card-19"></view>

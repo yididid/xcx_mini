@@ -1,0 +1,23 @@
+/* pages/effects/popMenu/index.wxss */
+page {
+  background-color: #fff;
+  /* 87ceeb */
+}
+
+.icon {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 250rpx;
+  right: 100rpx;
+  opacity: 0;
+}
+
+.icon_new {
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom: 250rpx;
+  right: 100rpx;
+  z-index: 100;
+}

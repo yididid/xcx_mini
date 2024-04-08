@@ -1,0 +1,73 @@
+/* pages/wxCase/checkbox/index.wxss */
+page {
+  padding-bottom: calc(constant(safe-area-inset-bottom)+ 120rpx);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 120rpx);
+  width: 100%;
+}
+
+scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  background: linear-gradient(to right, #a8edea 0%, #fed6e3 100%);
+  border: 1px solid #a8edea;
+}
+
+.head {
+  width: 100%;
+  height: 88rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.head view {
+  border: 1px solid #F5F5F8;
+  height: 100%;
+  text-align: center;
+  line-height: 88rpx;
+  display: inline-block;
+}
+
+.head view:last-child {
+  border-right: none;
+}
+
+.head view:nth-child(1) {
+  width: 100rpx;
+}
+
+.head view:nth-child(2) {
+  width: 300rpx;
+}
+
+.head view:nth-child(4),
+.head view:nth-child(3),
+.head view:nth-child(5),
+.head view:nth-child(6) {
+  width: 200rpx;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #fed6e3;
+}
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 18rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

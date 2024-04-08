@@ -1,0 +1,38 @@
+/* pages/jsCase/onLoaction/index.wxss */
+.btn {
+  margin: 40px auto;
+  width: 706rpx;
+  height: 100rpx;
+  background: linear-gradient(180deg, #FFEFC3 0%, #FFBC00 100%);
+  border-radius: 59rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 29rpx;
+  color: #fff;
+  position: relative;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 706rpx;
+  height: 100rpx;
+  background: #DBA30A;
+  border-radius: 59rpx;
+  top: 4px;
+  left: 0;
+  z-index: -1;
+}
+
+.btn_pop {
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #5C4A1A;
+  width: 256rpx;
+  height: 72prx;
+  background: linear-gradient(180deg, #FFEDBC 0%, #FFBE07 100%);
+  box-shadow: 0rpx 6rpx 0rpx #DBA30A;
+  border-radius: 36rpx;
+}

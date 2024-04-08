@@ -1,0 +1,4 @@
+/* pages/wxCase/vanUpload/index.wxss */
+page{
+  background-color: #fff;
+}

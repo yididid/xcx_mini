@@ -1,0 +1,37 @@
+/* pages/getStar/index.wxss */
+.con{
+  margin: 30rpx 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 200rpx 40rpx;
+}
+.itm_img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 25rpx;
+}
+.review_list{
+  flex-wrap: wrap;
+  margin-top: 60rpx;
+}
+.item{
+  width: 160rpx;
+  height: 50rpx;
+  background: #FFEAD4;
+  border: 1rpx solid #FF911A;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FF911A;
+  line-height:50rpx;
+  text-align: center;
+  margin-right: 69rpx;
+  margin-bottom: 48rpx;
+}
+.item:nth-child(3n){
+  margin-right:0;
+}
+.chosed{
+  background: #FF911A;
+  color: #fff;
+}

@@ -1,0 +1,5 @@
+<!--pages/charts/index4.wxml-->
+<view class="container">
+  <ec-canvas class="ec-canvas1" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ec1}}" bind:init="echartInit"></ec-canvas>
+</view>
+
