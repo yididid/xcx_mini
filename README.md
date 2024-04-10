@@ -46,5 +46,4 @@
 ![1712562081681](https://github.com/yididid/wyy_music/assets/56509940/c62ef5d3-a879-436d-a308-2fbd1a63e812)
 
 
-Tips：在npm install or yarn install 的时候，请确保网络良好
-如有问题：请 Issue 或联系wx：w1979476918
+Tips：如有问题：请 Issue 或联系wx：w1979476918
